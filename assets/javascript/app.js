@@ -6,18 +6,18 @@ $(document).ready(function () {
     })
 
 function searchAjax(){
-    var q = $('#searchTerm').val(); 
-    var fq = $('#records').val();
-    var beginDate= $('#startYear').val();
-    var endDate = $('#endYear').val();
+    var q = $('#search-box').val(); console.log(q)
+    var fq = $('#recordsBox').val();
+    var beginDate= $('#startYearbox').val();
+    var endDate = $('#endYearbox').val();
 
     var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
     queryURL += '?' + $.param({
         'api-key': "b7e4aad889aa48b0a96120aba4672222",
-        'q': 'dogs',
-        // 'fq': fq,
-        // 'begin_date': beginDate,
-        // 'end_date': endDate,
+        'q': q,
+        'fq': fq,
+        'begin_date': beginDate,
+        'end_date': endDate,
     });
 
 
@@ -26,11 +26,13 @@ function searchAjax(){
         method: "GET"
       }).then(function(response) {
         console.log(response);
-// var article = response.response.docs;
-// for( i = 0; i < fq; i++){
+
+        // var article = response.docs.lengths;
+        
+        for( i = 0; i < response.docs.length; i++){
     
-//     $("#theArticle").append(article[i].abstract);
-// }
+            $("#theArticle").append(resonse.docs[i].headline);
+        }
         
       });
   
