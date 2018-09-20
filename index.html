@@ -12,11 +12,67 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
 
 </head>
 
 <body>
+New York Times Article Search
 
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-6">New York Times Article Search.</h1>
+      <p class="lead"></p>
+    </div>
+  </div>
+
+<div id="wrapper">
+
+  <h1 id="searchParamater"></h1>
+
+<p>Search Term:</p>
+  <div id="searchTerm" class="input-group mb-3">
+    <div class="input-group-prepend">
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div>
+
+
+<p>Records</p>
+  <div id="records" class="input-group mb-3">
+    <div class="input-group-prepend">
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div>
+
+  <p> Start Year (optional):</p>
+
+  <div id="startYear" class="input-group mb-3">
+    <div class="input-group-prepend">
+        </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div>
+
+<p>End Year (optional):</p>
+  <div id="endYear" class="input-group mb-3">
+    <div class="input-group-prepend">
+
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div>
+
+   
+  <button id="search" type="button" class="btn btn-light">Search</button>
+
+  <button id="theArticle" type="button" class="btn btn-light">Clear results</button>
+
+
+</div>
+  
+
+
+
+  <script src = './assets/javascript/app.js'></script>
 </body>
 
 </html>
